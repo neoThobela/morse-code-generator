@@ -1,11 +1,17 @@
-<mat-card class="example-card" appearance="outlined">
-  <mat-card-header>
-    <mat-card-title>Morse Code Translator</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <p>hi</p>
-  </mat-card-content>
-  <mat-card-footer class="example-card-footer">
-   
-  </mat-card-footer>
+<mat-card>
+  <h2>Morse Code Translator 🛰️</h2>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Enter your message</mat-label>
+    <input matInput [(ngModel)]="inputText" placeholder="Type here...">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="convertToMorseCode()">
+    Convert to Morse Code
+  </button>
+
+  <div *ngIf="translatedText">
+    <h3>🔐 Morse Code Output:</h3>
+    <p> {{translatedText}}</p>
+  </div>
 </mat-card>
