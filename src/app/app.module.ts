@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { TranslatorComponent } from './components/translator/translator.component';
 
 import { MatCardModule } from '@angular/material/card';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { MatCardModule } from '@angular/material/card';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
