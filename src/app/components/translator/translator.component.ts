@@ -30,4 +30,31 @@ export class TranslatorComponent {
       .join(' ');
   }
   
+learningMode = false;
+currentChar: string = '';
+userGuess: string = '';
+feedback: string = '';
+
+startLearningMode() {
+  this.learningMode = true;
+  this.userGuess = '';
+  this.feedback = '';
+  this.pickRandomCharacter();
+}
+
+pickRandomCharacter() {
+  const keys = Object.keys(this.morseCodeMap).filter(k => k.length === 1); // Letters/numbers only
+  this.currentChar = keys[Math.floor(Math.random() * keys.length)];
+}
+
+checkUserGuess() {
+  const correct = this.morseCodeMap[this.currentChar];
+  if (this.userGuess.trim() === correct) {
+    this.feedback = '✅ Correct!';
+  } else {
+    this.feedback = `❌ Incorrect. Correct answer: ${correct}`;
+  }
+}
+
+
 }
