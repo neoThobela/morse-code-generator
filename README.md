@@ -12,7 +12,7 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 ## 🖥️ Demo
 
-![Morse Code Demo]([https://your-demo-screenshot-url.com](https://morse-code-generator-pyrdml7ic-neothobelas-projects.vercel.app/)) <!-- Optional screenshot placeholder -->
+![Morse Code Demo]((https://morse-code-generator-pyrdml7ic-neothobelas-projects.vercel.app/)) <!-- Optional screenshot placeholder -->
 
 ---
 
@@ -124,16 +124,6 @@ ng e2e
 - [Angular CLI Documentation](https://angular.dev/tools/cli)
 - [Angular Developer Guide](https://angular.dev/guide/what-is-angular)
 - [Morse Code - Wikipedia](https://en.wikipedia.org/wiki/Morse_code)
-
----
-
-## 💡 Future Feature Ideas
-
-- 🔊 Play Morse code as sound
-- 📋 Copy to clipboard functionality
-- 🌙 Dark/Light theme toggle
-- 🌐 Internationalization (i18n) support
-- 🧪 Advanced testing coverage
 
 ---
 
