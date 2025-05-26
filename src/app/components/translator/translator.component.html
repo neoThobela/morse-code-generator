@@ -15,33 +15,46 @@
     <p> {{translatedText}}</p>
   </div>
 
-<mat-card *ngIf="learningMode">
-  <h2>🧠 Learn Morse Mode</h2>
+  <!-- Morse to English Section -->
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Enter Morse Code </mat-label>
+    <input matInput [(ngModel)]="morseInput" placeholder="Morse code here...">
+  </mat-form-field>
 
-  <div class="learn-section">
-    <p>Translate this character into Morse code:</p>
-    <h1 class="learn-char">{{ currentChar }}</h1>
+  <button mat-raised-button color="accent" (click)="convertToEnglish()">
+    Convert to English
+  </button>
 
-    <mat-form-field appearance="outline" class="full-width">
-      <mat-label>Your answer (e.g. .-)</mat-label>
-      <input matInput [(ngModel)]="userGuess" />
-    </mat-form-field>
-
-    <button mat-raised-button color="primary" (click)="checkUserGuess()">
-      Check Answer
-    </button>
-
-    <p *ngIf="feedback" class="feedback">{{ feedback }}</p>
-
-    <button mat-button (click)="pickRandomCharacter()">Try Another</button>
-    <button mat-button color="warn" (click)="learningMode = false">Exit Learn Mode</button>
+  <div *ngIf="englishOutput">
+    <h3>📝 English Output:</h3>
+    <p>{{ englishOutput }}</p>
   </div>
-</mat-card>
 
-<!-- Add Learn Mode Button -->
-<button mat-stroked-button color="accent" (click)="startLearningMode()">
-  🎓 Learn Morse Mode
-</button>
+  <mat-card *ngIf="learningMode">
+    <h2>🧠 Learn Morse Mode</h2>
 
+    <div class="learn-section">
+      <p>Translate this character into Morse code:</p>
+      <h1 class="learn-char">{{ currentChar }}</h1>
 
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Your answer (e.g. .-)</mat-label>
+        <input matInput [(ngModel)]="userGuess" />
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" (click)="checkUserGuess()">
+        Check Answer
+      </button>
+
+      <p *ngIf="feedback" class="feedback">{{ feedback }}</p>
+
+      <button mat-button (click)="pickRandomCharacter()">Try Another</button>
+      <button mat-button color="warn" (click)="learningMode = false">Exit Learn Mode</button>
+    </div>
+  </mat-card>
+
+  <!-- Learn Mode Button -->
+  <button mat-stroked-button color="accent" (click)="startLearningMode()">
+    🎓 Learn Morse Mode
+  </button>
 </mat-card>

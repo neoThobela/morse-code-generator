@@ -8,8 +8,12 @@ import { Component } from '@angular/core';
 })
 export class TranslatorComponent {
 
+  
   inputText: string = '';
   translatedText: string = '';
+
+  morseInput: string = '';
+  englishOutput: string = '';
 
   morseCodeMap: { [key: string]: string } = {
     A: '.-', B: '-...', C: '-.-.', D: '-..', E: '.', F: '..-.', G: '--.',
@@ -22,6 +26,15 @@ export class TranslatorComponent {
     '-': '-....-', '_': '..--.-'
   };
 
+  morseToEnglishMap: { [key: string]: string } = {};
+
+  constructor() {
+    // Build reverse map
+    for (let key in this.morseCodeMap) {
+      this.morseToEnglishMap[this.morseCodeMap[key]] = key;
+    }
+  }
+
   convertToMorseCode() {
     this.translatedText = this.inputText
       .toUpperCase()
@@ -29,32 +42,40 @@ export class TranslatorComponent {
       .map(char => this.morseCodeMap[char] || '')
       .join(' ');
   }
-  
-learningMode = false;
-currentChar: string = '';
-userGuess: string = '';
-feedback: string = '';
 
-startLearningMode() {
-  this.learningMode = true;
-  this.userGuess = '';
-  this.feedback = '';
-  this.pickRandomCharacter();
-}
-
-pickRandomCharacter() {
-  const keys = Object.keys(this.morseCodeMap).filter(k => k.length === 1); // Letters/numbers only
-  this.currentChar = keys[Math.floor(Math.random() * keys.length)];
-}
-
-checkUserGuess() {
-  const correct = this.morseCodeMap[this.currentChar];
-  if (this.userGuess.trim() === correct) {
-    this.feedback = '✅ Correct!';
-  } else {
-    this.feedback = `❌ Incorrect. Correct answer: ${correct}`;
+  convertToEnglish() {
+    this.englishOutput = this.morseInput
+      .trim()
+      .split(' ')
+      .map(code => code === '/' ? ' ' : this.morseToEnglishMap[code] || '')
+      .join('');
   }
-}
 
+  // Learn Mode Logic
+  learningMode = false;
+  currentChar: string = '';
+  userGuess: string = '';
+  feedback: string = '';
+
+  startLearningMode() {
+    this.learningMode = true;
+    this.userGuess = '';
+    this.feedback = '';
+    this.pickRandomCharacter();
+  }
+
+  pickRandomCharacter() {
+    const keys = Object.keys(this.morseCodeMap).filter(k => k.length === 1); // Letters/numbers only
+    this.currentChar = keys[Math.floor(Math.random() * keys.length)];
+  }
+
+  checkUserGuess() {
+    const correct = this.morseCodeMap[this.currentChar];
+    if (this.userGuess.trim() === correct) {
+      this.feedback = '✅ Correct!';
+    } else {
+      this.feedback = `❌ Incorrect. Correct answer: ${correct}`;
+    }
+  }
 
 }
