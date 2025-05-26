@@ -1,59 +1,152 @@
-# MorseCodeGenerator
+# 🚀 MorseCodeGenerator
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.13.
+**MorseCodeGenerator** is a fun and interactive Angular application that allows users to:
 
-## Development server
+- 🔤 Translate text to Morse code
+- 🔁 Convert Morse code back to English
+- 🎓 Practice with a built-in Learn Mode
 
-To start a local development server, run:
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version **19.2.13**.
 
+---
+
+## 🖥️ Demo
+
+![Morse Code Demo]([https://your-demo-screenshot-url.com](https://morse-code-generator-pyrdml7ic-neothobelas-projects.vercel.app/)) <!-- Optional screenshot placeholder -->
+
+---
+
+## 📦 Features
+
+- Convert plain text to Morse code
+- Convert Morse code back to English
+- Learn Mode for character-by-character Morse practice
+- Simple, responsive UI with Angular Material
+- Easy to extend with new features like sound, themes, etc.
+
+---
+
+## 🛠️ Getting Started
+
+### Prerequisites
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (v16 or above recommended)
+- [Angular CLI](https://angular.dev/tools/cli)
+
+Install Angular CLI globally:
+
+```bash
+npm install -g @angular/cli
+```
+
+---
+
+## ▶️ Running the App
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/yourusername/morse-code-generator.git
+cd morse-code-generator
+```
+
+### 2. Install Dependencies
+```bash
+npm install
+```
+
+### 3. Start the Development Server
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Then open your browser and navigate to:
+```
+http://localhost:4200/
+```
 
-## Code scaffolding
+The app will reload automatically when you modify source files.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
+
+## ⚙️ Code Scaffolding
+
+To generate a new component, directive, or pipe:
 
 ```bash
 ng generate component component-name
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+For all available schematics:
 
 ```bash
 ng generate --help
 ```
 
-## Building
+---
 
-To build the project run:
+## 🏗️ Build the Project
+
+To build the project for production:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+This compiles the application and stores the build artifacts in the `dist/` directory.
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 🧪 Running Unit Tests
+
+To run unit tests using Karma:
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## 🧭 Running End-to-End Tests
+
+To run e2e tests:
 
 ```bash
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+> ⚠️ Note: Angular CLI does not include an e2e framework by default. You can integrate tools like **Cypress** or **Protractor**.
 
-## Additional Resources
+---
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 📚 Additional Resources
+
+- [Angular CLI Documentation](https://angular.dev/tools/cli)
+- [Angular Developer Guide](https://angular.dev/guide/what-is-angular)
+- [Morse Code - Wikipedia](https://en.wikipedia.org/wiki/Morse_code)
+
+---
+
+## 💡 Future Feature Ideas
+
+- 🔊 Play Morse code as sound
+- 📋 Copy to clipboard functionality
+- 🌙 Dark/Light theme toggle
+- 🌐 Internationalization (i18n) support
+- 🧪 Advanced testing coverage
+
+---
+
+## 🧑‍💻 Author
+
+Built with ❤️ by [NEO]([https://github.com/yourusername](https://github.com/neoThobela))
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+Enjoy coding and learning Morse! 🛰️
