@@ -10,9 +10,9 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 ---
 
-## 🖥️ Demo
+## 🖥️ Live Demo Link
 
-![Morse Code Demo]((https://morse-code-generator-pyrdml7ic-neothobelas-projects.vercel.app/)) <!-- Optional screenshot placeholder -->
+https://morse-code-generator-pyrdml7ic-neothobelas-projects.vercel.app/
 
 ---
 
